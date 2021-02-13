@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d90fb581-3f7a-45c4-b2a7-8122afa7e4ca" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/useState/todo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/useState/useState.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/useState/todo.js" beforeDir="false" afterPath="$PROJECT_DIR$/useState/todo.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +37,7 @@
       <option name="presentableId" value="Default" />
       <updated>1612850317309</updated>
       <workItem from="1612850318440" duration="100000" />
+      <workItem from="1613245702719" duration="3000" />
     </task>
     <servers />
   </component>

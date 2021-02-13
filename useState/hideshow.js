@@ -76,7 +76,7 @@ class App extends React.Component {
   }
 }
 
-// function component with hooks
+// function component using hooks
 function App({ posts }) {
   const [openId, setOpenId] = React.useState(0);
 

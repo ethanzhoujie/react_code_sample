@@ -39,7 +39,7 @@ class Theme extends React.Component {
   }
 }
 
-// class component
+// class component using class fields
 class Theme extends React.Component {
   state = {
     theme: 'light'
@@ -63,7 +63,7 @@ class Theme extends React.Component {
   }
 }
 
-// function component with hooks
+// function component using hooks
 function Theme () {
     const [theme, setTheme] = React.useState('light');
 

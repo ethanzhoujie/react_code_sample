@@ -72,7 +72,7 @@ class Todo extends React.Component {
   }
 }
 
-// class component with field
+// class component using class fields
 class Todo extends React.Component {
   state = {
     input: "",
@@ -128,7 +128,7 @@ class Todo extends React.Component {
   }
 }
 
-// function component with hooks
+// function component using hooks
 function Todo() {
   const [input, setInput] = React.useState("");
   const [todos, setTodos] = React.useState([]);
