@@ -9,17 +9,85 @@ import "./styles.css";
     Only one post can be "Open" at a time.
 */
 
-function App ({ posts }) {
+// class component
+class App extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      openId: 0,
+      posts: props.posts
+    }
+    this.setOpenId = this.setOpenId.bind(this)
+  }
+  setOpenId(id) {
+    this.setState({openId: id})
+  }
+  render() {
+    const { openId, posts } = this.state
+    return (
+      <div>
+        <ul>
+          {posts.map(({ id, img, text }) => {
+            const isOpen = openId === id
+            const display = isOpen ? text : text.substring(50) + "..."
+            return (
+              <li key={id} style={{ border: isOpen ? "2px solid black" : "none" }}>
+                <img src={img} alt={id}></img>
+                <p>{display}</p>
+                {!isOpen && <button onClick={() => this.setOpenId(id)}>Open</button>}
+              </li>
+            )
+          })}
+        </ul>
+      </div>
+    )
+  }
+}
+
+// class component using class fields
+class App extends React.Component {
+  state = {
+    openId: 0,
+    posts: this.props.posts
+  }
+
+  setOpenId = (id) => {
+    this.setState({openId: id})
+  }
+  render() {
+    const { openId, posts } = this.state
+    return (
+      <div>
+        <ul>
+          {posts.map(({ id, img, text }) => {
+            const isOpen = openId === id
+            const display = isOpen ? text : text.substring(50) + "..."
+            return (
+              <li key={id} style={{ border: isOpen ? "2px solid black" : "none" }}>
+                <img src={img} alt={id}></img>
+                <p>{display}</p>
+                {!isOpen && <button onClick={() => this.setOpenId(id)}>Open</button>}
+              </li>
+            )
+          })}
+        </ul>
+      </div>
+    )
+  }
+}
+
+// function component with hooks
+function App({ posts }) {
   const [openId, setOpenId] = React.useState(0);
 
   return (
     <div>
       <ul>
-        {posts.map(({id, img, text}) => {
+        {posts.map(({ id, img, text }) => {
           const isOpen = openId === id
           const display = isOpen ? text : text.substring(50) + "..."
-          return(
-            <li style={{border: isOpen ? "2px solid black" : "none"}}>
+          return (
+            <li key={id} style={{ border: isOpen ? "2px solid black" : "none" }}>
               <img src={img} alt={id}></img>
               <p>{display}</p>
               {!isOpen && <button onClick={() => setOpenId(id)}>Open</button>}
