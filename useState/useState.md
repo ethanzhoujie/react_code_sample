@@ -1,3 +1,4 @@
+```javascript
 import React from "react";
 import ReactDOM from "react-dom";
 import './styles.css'
@@ -83,3 +84,5 @@ function Theme () {
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(<Theme />, rootElement);
+```
+

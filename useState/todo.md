@@ -1,3 +1,4 @@
+```javascript
 import React from "react";
 import ReactDOM from "react-dom";
 
@@ -167,3 +168,5 @@ function generateId() {
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(<Todo />, rootElement);
+```
+
